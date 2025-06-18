@@ -11,6 +11,7 @@ export default function Testimonials() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-brand font-bold text-gray-900 mb-6">
             EQUIPA
           </h2>
+          <div className="mx-auto mt-6 w-20 h-1 bg-gradient-to-r from-brand-teal-dark to-brand-teal-light"></div>
         </div>
 
         {/* Founders Photos Grid */}

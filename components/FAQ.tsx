@@ -56,6 +56,7 @@ export default function FAQ() {
     <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-brand font-bold text-gray-900 mb-12 text-center">Perguntas Frequentes</h2>
+        <div className="mx-auto mt-6 mb-12 w-20 h-1 bg-gradient-to-r from-brand-teal-dark to-brand-teal-light"></div>
         <ul className="space-y-4" role="list">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx

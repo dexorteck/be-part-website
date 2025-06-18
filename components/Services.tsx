@@ -12,6 +12,7 @@ export default function Services() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-brand font-bold text-gray-900 mb-6">
             SERVIÇOS
           </h2>
+          <div className="mx-auto mt-6 mb-10 w-20 h-1 bg-gradient-to-r from-brand-teal-dark to-brand-teal-light"></div>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Oferecemos soluções integradas para elevar a sua marca e criar experiências que fazem a diferença.
           </p>
