@@ -134,10 +134,5 @@ The landing page is fully responsive with breakpoints:
 - Optimized fonts
 - Responsive images
 
-## 📞 Contact
-Email: info@bepart.pt  
-Phone: +351 123 456 789  
-Location: Lisbon, Portugal
-
 Be Part – Events & Communication  
 Connecting people, ideas, and experiences. Every piece matters. 
