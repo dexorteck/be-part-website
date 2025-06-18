@@ -30,7 +30,7 @@ export default function Testimonials() {
               VITOR MACIAS
             </h3>
             <p className="text-lg font-medium text-brand-teal-dark uppercase tracking-wide">
-              CO - FOUNDER AND CEO
+              CO - FOUNDER AND EVENTS DIRECTOR
             </p>
           </div>
 

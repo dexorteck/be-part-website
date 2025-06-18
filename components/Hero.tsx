@@ -6,7 +6,7 @@ import FingerprintAnimation from './FingerprintAnimation'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden py-10 sm:py-16">
+    <section className="relative min-h-screen h-screen flex items-center justify-center bg-gray-900 overflow-hidden py-10 sm:py-16">
       {/* Dark Background with Custom Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
       
@@ -17,17 +17,16 @@ export default function Hero() {
         <div className="absolute bottom-0 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-brand-teal-dark/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-3xl sm:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-3xl sm:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-center h-full">
         <div className="space-y-6 sm:space-y-8">
-          
           {/* Fingerprint Animation - Positioned above title */}
-          <div className="mb-4 sm:mb-6">
+          <div className="mb-4 sm:mb-6 -mt-6 sm:mt-0">
             <FingerprintAnimation />
           </div>
 
           {/* Main Headline */}
           <div className="space-y-2 sm:space-y-4">
-            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-brand font-bold leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-brand font-bold leading-tight">
               <span className="block text-white">BE PART:</span>
               <span className="block gradient-text">EVERY PIECE</span>
               <span className="block text-brand-teal-light">MATTERS</span>
