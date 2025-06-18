@@ -1,68 +1,61 @@
 # Be Part – Events & Communication
 
-Uma landing page elegante e responsiva para a marca "Be Part – Events & Communication", desenvolvida com React, Next.js e Tailwind CSS.
+> **Notice:**  
+> This repository is an exclusive project developed by Dexorteck for Be Part.  
+> We do not accept external contributions.
 
-## 🎯 Sobre o Projeto
+An elegant and responsive landing page for the "Be Part – Events & Communication" brand, developed with React, Next.js, and Tailwind CSS.
 
-Landing page institucional que apresenta os serviços da Be Part de forma sofisticada e moderna, destacando:
-- Consultoria estratégica
-- Planejamento e produção de eventos
-- Serviços de comunicação
-- Soluções sustentáveis (Evergreen Solutions)
+🎯 About the Project  
+An institutional landing page that presents Be Part's services in a sophisticated and modern way, highlighting:
 
-## 🎨 Design
+- Strategic consulting
+- Event planning and production
+- Communication services
+- Sustainable solutions (Evergreen Solutions)
 
-- **Cores**: Branco, preto, cinza escuro e dourado suave/bege claro
-- **Tipografia**: Playfair Display (serif) para headings, Inter (sans-serif) para texto
-- **Layout**: Espaços amplos, transições suaves, efeitos de scroll elegantes
-- **Responsivo**: Totalmente adaptado para mobile, tablet e desktop
+🎨 Design  
+- Colors: White, black, dark gray, and soft gold/light beige  
+- Typography: Playfair Display (serif) for headings, Inter (sans-serif) for text  
+- Layout: Spacious, smooth transitions, elegant scroll effects  
+- Responsive: Fully adapted for mobile, tablet, and desktop
 
-## 🔧 Tecnologias
+🔧 Technologies  
+- Framework: Next.js 14 (App Router)  
+- Styling: Tailwind CSS  
+- Icons: Lucide React  
+- Typography: Google Fonts (Playfair Display, Inter)  
+- Language: TypeScript
 
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Typography**: Google Fonts (Playfair Display, Inter)
-- **Language**: TypeScript
-
-## 📦 Instalação
-
-1. **Clone o repositório**
+📦 Installation  
+Clone the repository:
 ```bash
-git clone [url-do-repositorio]
+git clone [repository-url]
 cd be-part-landing
 ```
-
-2. **Instale as dependências**
+Install dependencies:
 ```bash
 npm install
 ```
-
-3. **Execute o projeto em desenvolvimento**
+Run in development:
 ```bash
 npm run dev
 ```
-
-4. **Acesse no navegador**
-```
+Open in your browser:  
 http://localhost:3000
-```
 
-## 🚀 Deploy
-
-### Produção
+🚀 Deploy  
+Production:
 ```bash
 npm run build
 npm run start
 ```
-
-### Deploy na Vercel (recomendado)
+Recommended deploy on Vercel:
 ```bash
 npx vercel
 ```
 
-## 📁 Estrutura do Projeto
-
+📁 Project Structure
 ```
 be-part-landing/
 ├── app/
@@ -70,97 +63,81 @@ be-part-landing/
 │   ├── layout.tsx
 │   └── page.tsx
 ├── components/
-│   ├── Hero.tsx          # Seção principal
-│   ├── About.tsx         # Sobre nós + citação Ricardo Reis
-│   ├── Services.tsx      # Serviços (3 cards)
-│   ├── Evergreen.tsx     # Soluções sustentáveis
-│   ├── Testimonials.tsx  # Fundadores
-│   └── CTA.tsx          # Call to action final
+│   ├── Hero.tsx          # Main section
+│   ├── About.tsx         # About us + Ricardo Reis quote
+│   ├── Services.tsx      # Services (3 cards)
+│   ├── Evergreen.tsx     # Sustainable solutions
+│   ├── Testimonials.tsx  # Founders
+│   └── CTA.tsx           # Final call to action
 ├── package.json
 ├── tailwind.config.js
 ├── postcss.config.js
 └── next.config.js
 ```
 
-## 🎯 Seções da Landing Page
+🎯 Landing Page Sections  
+1. Hero Section  
+   - Main phrase: "BE PART: EVERY PIECE MATTERS"  
+   - Subheadline: "Events. Communication. Strategic Consulting."  
+   - Main CTA: "Let's talk"
 
-### 1. Hero Section
-- Frase principal: "BE PART: EVERY PIECE MATTERS"
-- Subheadline: "Eventos. Comunicação. Consultoria Estratégica."
-- CTA principal: "Vamos conversar"
+2. About Us  
+   - Institutional text  
+   - Poetic quote by Ricardo Reis  
+   - Company mission and vision
 
-### 2. Sobre Nós
-- Texto institucional
-- Citação poética de Ricardo Reis
-- Missão e visão da empresa
+3. Services  
+   - Strategic Consulting: Solutions aligned with clear objectives  
+   - Events: Planning and production of memorable experiences  
+   - Communication: Visual identity, social media, content
 
-### 3. Serviços
-- **Consultoria Estratégica**: Soluções alinhadas com objetivos claros
-- **Eventos**: Planejamento e produção de experiências memoráveis
-- **Comunicação**: Identidade visual, redes sociais, conteúdo
+4. Evergreen Solutions  
+   - Eco-friendly catering  
+   - Waste management  
+   - Electronic accreditation  
+   - Social impact
 
-### 4. Evergreen Solutions
-- Catering ecológico
-- Gestão de resíduos
-- Credenciação eletrônica
-- Impacto social
+5. Founders  
+   - Duarte Mairos – Co-founder & Communication Director  
+   - Vítor Macias – Co-founder & Events Director  
+   - Company statistics
 
-### 5. Fundadores
-- Duarte Mairos – Co-founder & Communication Director
-- Vítor Macias – Co-founder & Events Director
-- Estatísticas da empresa
+6. Call to Action  
+   - Final phrase: "LET US BE PART."  
+   - Contact information  
+   - Social media links
 
-### 6. Call to Action
-- Frase final: "LET US BE PART."
-- Informações de contato
-- Links para redes sociais
-
-## 🎨 Personalização
-
-### Cores
-As cores podem ser ajustadas no arquivo `tailwind.config.js`:
-```javascript
+🎨 Customization  
+**Colors**  
+Colors can be adjusted in the `tailwind.config.js` file:
+```js
 colors: {
   gold: {
-    // Tons dourados personalizados
+    // Custom gold shades
   }
 }
 ```
-
-### Tipografia
-Fontes configuradas no `app/globals.css`:
+**Typography**  
+Fonts are set in `app/globals.css`:
 - Playfair Display (serif)
 - Inter (sans-serif)
 
-## 📱 Responsividade
-
-A landing page é totalmente responsiva com breakpoints:
+📱 Responsiveness  
+The landing page is fully responsive with breakpoints:
 - Mobile: < 768px
 - Tablet: 768px - 1024px
 - Desktop: > 1024px
 
-## ⚡ Performance
+⚡ Performance  
+- SEO optimized
+- Lazy loading of components
+- Optimized fonts
+- Responsive images
 
-- Otimizada para SEO
-- Lazy loading de componentes
-- Fontes otimizadas
-- Imagens responsivas
+## 📞 Contact
+Email: info@bepart.pt  
+Phone: +351 123 456 789  
+Location: Lisbon, Portugal
 
-## 🤝 Contribuição
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
-
-## 📞 Contato
-
-- **Email**: info@bepart.pt
-- **Telefone**: +351 123 456 789
-- **Localização**: Lisboa, Portugal
-
----
-
-**Be Part – Events & Communication**  
-*Conectamos pessoas, ideias e experiências. Cada peça conta.* 
+Be Part – Events & Communication  
+Connecting people, ideas, and experiences. Every piece matters. 
