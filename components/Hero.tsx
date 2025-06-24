@@ -6,7 +6,7 @@ import FingerprintAnimation from './FingerprintAnimation'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen h-screen flex items-center justify-center bg-gray-900 overflow-hidden py-10 sm:py-16">
+    <section className="relative min-h-[90vh] h-[90vh] sm:min-h-screen sm:h-screen flex items-center justify-center bg-gray-900 overflow-hidden py-10 sm:py-16">
       {/* Dark Background with Custom Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
       

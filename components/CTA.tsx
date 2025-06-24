@@ -83,15 +83,30 @@ export default function CTA() {
               <div className="mt-8 pt-8 border-t border-white/20">
                 <p className="text-gray-400 text-sm mb-4">Siga-nos</p>
                 <div className="flex space-x-4">
-                  {['LinkedIn', 'Instagram', 'Facebook'].map((social) => (
-                    <a 
-                      key={social}
-                      href="#" 
-                      className="text-gray-400 hover:text-brand-teal-light transition-colors duration-300 text-sm font-medium"
-                    >
-                      {social}
-                    </a>
-                  ))}
+                  <a 
+                    href="https://www.linkedin.com/company/be-part-events-communication/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-brand-teal-light transition-colors duration-300 text-sm font-medium"
+                  >
+                    LinkedIn
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/bepart___?igsh=MXM1YTdtZWNxMno0eA%3D%3D&utm_source=qr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-brand-teal-light transition-colors duration-300 text-sm font-medium"
+                  >
+                    Instagram
+                  </a>
+                  <a 
+                    href="https://www.facebook.com/people/Be-Part-Every-Piece-Matters/61577650228547/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-brand-teal-light transition-colors duration-300 text-sm font-medium"
+                  >
+                    Facebook
+                  </a>
                 </div>
               </div>
             </div>
