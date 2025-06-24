@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-3xl sm:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-center h-full">
         <div className="space-y-6 sm:space-y-8">
           {/* Fingerprint Animation - Positioned above title */}
-          <div className="mb-4 sm:mb-6 -mt-6 sm:mt-0">
+          <div className="mb-4 sm:mb-6 -mt-6 sm:mt-0 relative z-20">
             <FingerprintAnimation />
           </div>
 

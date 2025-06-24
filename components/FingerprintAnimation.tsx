@@ -24,7 +24,7 @@ export default function FingerprintAnimation() {
   }, [])
 
   return (
-    <div className="relative w-full h-36 flex items-center justify-center">
+    <div className="relative w-full h-36 flex items-center justify-center z-30">
       {/* Container da animação */}
       <div className="relative w-80 h-28">
         
