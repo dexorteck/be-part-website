@@ -49,7 +49,7 @@ export default function CTA() {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm mb-1">Email</p>
-                    <p className="text-white font-medium">info@bepart.pt</p>
+                    <p className="text-white font-medium">geral@bepartmatters.com</p>
                   </div>
                 </div>
 

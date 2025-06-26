@@ -198,16 +198,17 @@ body {
   /* Classes específicas para CTA otimizadas */
   .cta-secondary-btn {
     will-change: transform, box-shadow, background-color, border-color;
-    transform: translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
   }
 
   .contact-icon {
-    will-change: transform;
-    transform: translateZ(0);
+    will-change: transform, color;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
 
   .social-link {
-    will-change: color;
+    will-change: transform, color;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
 
   /* Otimizações mobile para CTA */
@@ -222,15 +223,15 @@ body {
     }
     
     .contact-icon {
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, color 0.2s ease;
     }
     
     .contact-icon:hover {
-      transform: scale(1.05);
+      transform: translateY(-2px);
     }
     
     .social-link {
-      transition: color 0.2s ease;
+      transition: transform 0.2s ease, color 0.2s ease;
     }
   }
 
@@ -245,125 +246,127 @@ body {
     }
     
     .contact-icon {
-      transition: transform 0.15s ease;
+      transition: transform 0.15s ease, color 0.15s ease;
     }
     
     .contact-icon:hover {
-      transform: scale(1.03);
+      transform: translateY(-1px);
     }
     
     .social-link {
-      transition: color 0.15s ease;
+      transition: transform 0.15s ease, color 0.15s ease;
     }
   }
-}
 
-/* Custom Utilities */
-@layer utilities {
+  /* Custom background colors */
   .bg-gray-925 {
-    background-color: #1a202c;
+    background-color: var(--gray-925);
   }
-  
+
   .bg-gray-850 {
-    background-color: #2d3748;
+    background-color: var(--gray-850);
   }
-  
+
   .bg-gray-900 {
-    background-color: #171923;
+    background-color: var(--gray-900);
   }
-  
+
+  /* Custom text colors */
   .text-brand-teal-light {
-    color: #5fdfc6;
+    color: var(--brand-teal-light);
   }
-  
+
   .text-brand-teal-dark {
-    color: #02635a;
+    color: var(--brand-teal-dark);
   }
-  
+
   .text-brand-teal-medium {
-    color: #4fd1c7;
+    color: var(--brand-teal-medium);
   }
-  
+
+  /* Custom background colors */
   .bg-brand-teal-light {
-    background-color: #5fdfc6;
+    background-color: var(--brand-teal-light);
   }
-  
+
   .bg-brand-teal-dark {
-    background-color: #02635a;
+    background-color: var(--brand-teal-dark);
   }
-  
+
   .bg-brand-teal-medium {
-    background-color: #4fd1c7;
+    background-color: var(--brand-teal-medium);
   }
-  
+
+  /* Custom gradient colors */
   .from-brand-teal-light {
-    --tw-gradient-from: #5fdfc6;
+    --tw-gradient-from: var(--brand-teal-light);
     --tw-gradient-to: rgba(95, 223, 198, 0);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   }
-  
+
   .to-brand-teal-light {
-    --tw-gradient-to: #5fdfc6;
+    --tw-gradient-to: var(--brand-teal-light);
   }
-  
+
   .from-brand-teal-dark {
-    --tw-gradient-from: #02635a;
+    --tw-gradient-from: var(--brand-teal-dark);
     --tw-gradient-to: rgba(2, 99, 90, 0);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   }
-  
+
   .to-brand-teal-dark {
-    --tw-gradient-to: #02635a;
+    --tw-gradient-to: var(--brand-teal-dark);
   }
-  
+
   .from-brand-teal-medium {
-    --tw-gradient-from: #4fd1c7;
+    --tw-gradient-from: var(--brand-teal-medium);
     --tw-gradient-to: rgba(79, 209, 199, 0);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   }
-  
+
   .to-brand-teal-medium {
-    --tw-gradient-to: #4fd1c7;
-  }
-  
-  .border-brand-teal-light {
-    border-color: #5fdfc6;
-  }
-  
-  .border-brand-teal-dark {
-    border-color: #02635a;
+    --tw-gradient-to: var(--brand-teal-medium);
   }
 
-  /* Hero specific background gradient */
+  /* Custom border colors */
+  .border-brand-teal-light {
+    border-color: var(--brand-teal-light);
+  }
+
+  .border-brand-teal-dark {
+    border-color: var(--brand-teal-dark);
+  }
+
+  /* Hero gradient background */
   .bg-hero-gradient {
-    background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #171923 100%);
+    background: linear-gradient(135deg, #171923 0%, #1a202c 50%, #2d3748 100%);
   }
 }
 
-/* Smooth Scrolling */
+/* Global styles */
 html {
   scroll-behavior: smooth;
 }
 
-/* Hide scrollbar but keep functionality */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f7fafc;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5fdfc6;
-  border-radius: 3px;
+  background: var(--brand-teal-dark);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #02635a;
+  background: var(--brand-teal-medium);
 }
 
-/* Animation Classes */
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -383,68 +386,6 @@ html {
 @media (max-width: 768px) {
   .font-serif {
     line-height: 1.2;
-  }
-  
-  /* Hero section mobile optimizations - Solução CSS pura otimizada */
-  .hero-mobile-optimized {
-    min-height: 100vh;
-    height: 100vh;
-    padding-bottom: 80px;
-    /* Previne mudanças durante scroll usando viewport units estáveis */
-    height: 100vh;
-    min-height: 100vh;
-    /* Otimização de performance */
-    will-change: auto;
-    contain: layout style;
-  }
-  
-  /* Safari-specific fixes - usa altura estável */
-  @supports (-webkit-touch-callout: none) {
-    .hero-mobile-optimized {
-      /* Safari - usa altura estável que não muda durante scroll */
-      height: 100vh;
-      min-height: 100vh;
-      /* Remove -webkit-fill-available que causa mudanças */
-    }
-  }
-
-  /* Chrome/Android specific fixes */
-  @supports not (-webkit-touch-callout: none) {
-    .hero-mobile-optimized {
-      /* Chrome/Android - altura estável */
-      height: 100vh;
-      min-height: 100vh;
-    }
-  }
-
-  /* Ensure scroll indicator is always visible on mobile */
-  .scroll-indicator-mobile {
-    bottom: 20px !important;
-    z-index: 30;
-  }
-  
-  /* Better button spacing on mobile */
-  .cta-button-mobile {
-    margin-bottom: 60px;
-  }
-}
-
-/* Additional mobile optimizations for very small screens */
-@media (max-width: 480px) {
-  .hero-mobile-optimized {
-    min-height: 100vh; /* Fallback */
-    min-height: 100dvh; /* Dynamic viewport height */
-    height: 100vh; /* Fallback */
-    height: 100dvh; /* Dynamic viewport height */
-    padding-bottom: 100px;
-  }
-  
-  .scroll-indicator-mobile {
-    bottom: 16px !important;
-  }
-  
-  .cta-button-mobile {
-    margin-bottom: 80px;
   }
 }
 
@@ -548,47 +489,4 @@ html {
 .faq-content {
   transform: translateZ(0);
   backface-visibility: hidden;
-}
-
-/* Fingerprint Animation Z-Index Fix */
-.fingerprint-container {
-  position: relative;
-  z-index: 10;
-}
-
-.fingerprint-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* Ensure proper stacking context for Hero elements */
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-title {
-  position: relative;
-  z-index: 20;
-}
-
-.hero-fingerprint {
-  position: relative;
-  z-index: 10;
-}
-
-/* Fallback for older browsers */
-@supports not (height: 100dvh) {
-  .hero-mobile-optimized {
-    height: 100vh;
-    min-height: 100vh;
-  }
-}
-
-/* FAQ Component Optimizations */ 
+} 
