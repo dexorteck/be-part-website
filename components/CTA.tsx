@@ -4,8 +4,12 @@ import React from 'react'
 import { ArrowRight, Mail, MapPin } from 'lucide-react'
 
 export default function CTA() {
+  const openEmail = () => {
+    window.location.href = 'mailto:geral@bepartmatters.com'
+  }
+
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-925 via-gray-900 to-gray-850 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-gradient-to-br from-gray-925 via-gray-900 to-gray-850 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-brand-teal-light/20 rounded-full blur-3xl"></div>
@@ -27,7 +31,10 @@ export default function CTA() {
             </p>
 
             <div className="flex justify-center lg:justify-start">
-              <button className="group btn-sweep inline-flex items-center px-8 py-4 text-lg font-medium text-black transition-all duration-300 shadow-elegant hover:shadow-2xl transform hover:-translate-y-1">
+              <button 
+                onClick={openEmail}
+                className="group btn-sweep inline-flex items-center px-8 py-4 text-lg font-medium text-black transition-all duration-300 shadow-elegant hover:shadow-2xl transform hover:-translate-y-1"
+              >
                 Entrar em contacto
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>

@@ -5,6 +5,17 @@ import { ArrowRight } from 'lucide-react'
 import FingerprintAnimation from './FingerprintAnimation'
 
 export default function Hero() {
+  const scrollToCTA = () => {
+    const ctaSection = document.querySelector('section:last-child')
+    if (ctaSection) {
+      ctaSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const openEmail = () => {
+    window.location.href = 'mailto:geral@bepartmatters.com'
+  }
+
   return (
     <section className="relative min-h-[90vh] h-[90vh] sm:min-h-screen sm:h-screen flex items-center justify-center bg-gray-900 overflow-hidden py-10 sm:py-16">
       {/* Dark Background with Custom Gradient */}
@@ -41,8 +52,11 @@ export default function Hero() {
           </div>
 
           {/* CTA Button */}
-          <div className="pt-6 sm:pt-8 pb-8 sm:pb-12 relative z-20">
-            <button className="group btn-sweep inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-black transition-all duration-300 shadow-elegant hover:shadow-2xl transform hover:-translate-y-1">
+          <div className="pt-6 sm:pt-8 pb-4 sm:pb-8 relative z-20">
+            <button 
+              onClick={scrollToCTA}
+              className="group btn-sweep inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-black transition-all duration-300 shadow-elegant hover:shadow-2xl transform hover:-translate-y-1"
+            >
               Vamos conversar
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
@@ -50,11 +64,10 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="flex flex-col items-center space-y-2 text-gray-400">
-          <span className="text-xs sm:text-sm font-light">Scroll</span>
-          <div className="w-px h-6 sm:h-8 bg-gradient-to-b from-brand-teal-light to-transparent animate-pulse"></div>
+      {/* Scroll Indicator - Otimizado para mobile */}
+      <div className="absolute bottom-2 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="flex flex-col items-center">
+          <div className="w-px h-4 sm:h-8 bg-gradient-to-b from-brand-teal-light to-transparent animate-pulse"></div>
         </div>
       </div>
     </section>
