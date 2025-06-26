@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useCallback, memo, useRef, useLayoutEffect } from 'react'
 
 const faqs = [
   {
@@ -41,60 +41,106 @@ const faqs = [
   },
   {
     question: 'O que significa "Be Part"?',
-    answer: '“Be Part” é mais do que um nome – é uma forma de estar. Significa criar em conjunto, envolver e deixar marca. Acreditamos que fazer parte é construir algo com impacto real e duradouro.'
+    answer: '"Be Part" é mais do que um nome – é uma forma de estar. Significa criar em conjunto, envolver e deixar marca. Acreditamos que fazer parte é construir algo com impacto real e duradouro.'
   },
 ]
+
+// Componente otimizado para cada item FAQ com animações suaves
+const FAQItem = memo(({ 
+  faq, 
+  index, 
+  isOpen, 
+  onToggle 
+}: { 
+  faq: { question: string; answer: string }; 
+  index: number; 
+  isOpen: boolean; 
+  onToggle: (index: number) => void; 
+}) => {
+  const contentRef = useRef<HTMLDivElement>(null)
+  const [contentHeight, setContentHeight] = useState(0)
+
+  const handleClick = useCallback(() => {
+    onToggle(index)
+  }, [index, onToggle])
+
+  // Calcular altura do conteúdo uma vez
+  useLayoutEffect(() => {
+    if (contentRef.current) {
+      const height = contentRef.current.scrollHeight
+      setContentHeight(height)
+    }
+  }, [faq.answer])
+
+  return (
+    <li className="faq-item">
+      <div className={`faq-container ${isOpen ? 'faq-open' : ''}`}>
+        <button
+          onClick={handleClick}
+          aria-expanded={isOpen}
+          aria-controls={`faq-panel-${index}`}
+          className={`faq-button ${isOpen ? 'faq-button-open' : ''}`}
+        >
+          <span className={`faq-question ${isOpen ? 'faq-question-open' : ''}`}>
+            {faq.question}
+          </span>
+          <span className="faq-icon">
+            {isOpen ? (
+              <svg className="faq-icon-minus" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" />
+              </svg>
+            ) : (
+              <svg className="faq-icon-plus" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+              </svg>
+            )}
+          </span>
+        </button>
+        <div
+          id={`faq-panel-${index}`}
+          role="region"
+          aria-labelledby={`faq-header-${index}`}
+          className={`faq-content ${isOpen ? 'faq-content-open' : ''}`}
+          style={{
+            maxHeight: isOpen ? `${contentHeight}px` : '0px',
+            opacity: isOpen ? 1 : 0
+          }}
+        >
+          <div ref={contentRef} className="faq-answer">
+            {faq.answer}
+          </div>
+        </div>
+      </div>
+    </li>
+  )
+})
+
+FAQItem.displayName = 'FAQItem'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-  const handleToggle = (idx: number) => {
-    setOpenIndex(openIndex === idx ? null : idx)
-  }
+  const handleToggle = useCallback((idx: number) => {
+    setOpenIndex(prev => prev === idx ? null : idx)
+  }, [])
 
   return (
     <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-brand font-bold text-gray-900 mb-12 text-center">Perguntas Frequentes</h2>
+        <h2 className="text-4xl md:text-5xl font-brand font-bold text-gray-900 mb-12 text-center">
+          Perguntas Frequentes
+        </h2>
         <div className="mx-auto mt-6 mb-12 w-20 h-1 bg-gradient-to-r from-brand-teal-dark to-brand-teal-light"></div>
-        <ul className="space-y-4" role="list">
-          {faqs.map((faq, idx) => {
-            const isOpen = openIndex === idx
-            return (
-              <li key={idx} className="">
-                <div
-                  className={`rounded-2xl border border-gray-200 shadow-md bg-white transition-all duration-300 ${isOpen ? 'border-brand-teal-dark shadow-lg' : ''}`}
-                >
-                  <button
-                    onClick={() => handleToggle(idx)}
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-panel-${idx}`}
-                    className={`w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none focus:ring-2 focus:ring-brand-teal-dark rounded-2xl transition-all duration-200 ${isOpen ? 'bg-brand-teal-light/10' : 'hover:bg-brand-teal-light/5'}`}
-                  >
-                    <span className={`text-lg md:text-xl font-semibold transition-colors duration-200 ${isOpen ? 'text-brand-teal-dark' : 'text-gray-900'}`}>{faq.question}</span>
-                    <span className="ml-4 flex items-center justify-center">
-                      {isOpen ? (
-                        <svg className="w-6 h-6 text-brand-teal-dark" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" /></svg>
-                      ) : (
-                        <svg className="w-6 h-6 text-brand-teal-dark" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" /></svg>
-                      )}
-                    </span>
-                  </button>
-                  <div
-                    id={`faq-panel-${idx}`}
-                    role="region"
-                    aria-labelledby={`faq-header-${idx}`}
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 py-4' : 'max-h-0 opacity-0 py-0'}`}
-                    style={{ transitionProperty: 'max-height, opacity, padding' }}
-                  >
-                    <div className="px-6 text-gray-700 text-base md:text-lg whitespace-pre-line">
-                      {faq.answer}
-                    </div>
-                  </div>
-                </div>
-              </li>
-            )
-          })}
+        <ul className="faq-list" role="list">
+          {faqs.map((faq, idx) => (
+            <FAQItem
+              key={idx}
+              faq={faq}
+              index={idx}
+              isOpen={openIndex === idx}
+              onToggle={handleToggle}
+            />
+          ))}
         </ul>
       </div>
     </section>

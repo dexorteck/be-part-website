@@ -24,7 +24,7 @@ export default function FingerprintAnimation() {
   }, [])
 
   return (
-    <div className="relative w-full h-36 flex items-center justify-center z-30">
+    <div className="relative w-full h-36 flex items-center justify-center">
       {/* Container da animação */}
       <div className="relative w-80 h-28">
         
@@ -35,7 +35,8 @@ export default function FingerprintAnimation() {
             !showComplete ? 'translate-x-20 opacity-80 scale-90' : 'translate-x-24 opacity-0 scale-50'
           }`}
           style={{ 
-            transitionDuration: showComplete ? '600ms' : '2000ms'
+            transitionDuration: showComplete ? '600ms' : '2000ms',
+            zIndex: showComplete ? 1 : 10
           }}
         >
           <img 
@@ -57,7 +58,8 @@ export default function FingerprintAnimation() {
           }`}
           style={{ 
             transitionDelay: showComplete ? '0ms' : '200ms',
-            transitionDuration: showComplete ? '600ms' : '2000ms'
+            transitionDuration: showComplete ? '600ms' : '2000ms',
+            zIndex: showComplete ? 1 : 10
           }}
         >
           <img 
@@ -77,7 +79,8 @@ export default function FingerprintAnimation() {
             isAnimating && !showComplete ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
           }`}
           style={{ 
-            transitionDelay: showComplete ? '0ms' : '1800ms'
+            transitionDelay: showComplete ? '0ms' : '1800ms',
+            zIndex: showComplete ? 1 : 5
           }}
         >
           <div className="h-0.5 w-20 bg-gradient-to-r from-brand-teal-light to-brand-teal-dark opacity-70 rounded-full"></div>
@@ -88,7 +91,10 @@ export default function FingerprintAnimation() {
           className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-1200 ease-out ${
             showComplete ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
           }`}
-          style={{ transitionDelay: showComplete ? '300ms' : '0ms' }}
+          style={{ 
+            transitionDelay: showComplete ? '300ms' : '0ms',
+            zIndex: showComplete ? 1 : 15
+          }}
         >
           <div className="relative">
             {/* Glow de fundo */}
@@ -112,7 +118,8 @@ export default function FingerprintAnimation() {
         {/* Partículas */}
         <div className={`absolute inset-0 transition-opacity duration-600 ${
           isAnimating && !showComplete ? 'opacity-100' : 'opacity-0'
-        }`}>
+        }`}
+        style={{ zIndex: showComplete ? 1 : 8 }}>
           {[...Array(4)].map((_, i) => (
             <div
               key={i}

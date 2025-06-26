@@ -228,4 +228,154 @@ html {
   .font-serif {
     line-height: 1.2;
   }
+  
+  /* Hero section mobile optimizations */
+  .hero-mobile-optimized {
+    min-height: 90vh;
+    height: 90vh;
+    padding-bottom: 80px; /* Extra space for scroll indicator */
+  }
+  
+  /* Ensure scroll indicator is always visible on mobile */
+  .scroll-indicator-mobile {
+    bottom: 20px !important;
+    z-index: 30;
+  }
+  
+  /* Better button spacing on mobile */
+  .cta-button-mobile {
+    margin-bottom: 60px;
+  }
+}
+
+/* Additional mobile optimizations for very small screens */
+@media (max-width: 480px) {
+  .hero-mobile-optimized {
+    min-height: 90vh;
+    height: 90vh;
+    padding-bottom: 100px;
+  }
+  
+  .scroll-indicator-mobile {
+    bottom: 16px !important;
+  }
+  
+  .cta-button-mobile {
+    margin-bottom: 80px;
+  }
+}
+
+/* FAQ Component Optimizations */
+.faq-list {
+  @apply space-y-4;
+}
+
+.faq-item {
+  @apply will-change-transform;
+}
+
+.faq-container {
+  @apply rounded-2xl border border-gray-200 shadow-md bg-white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-container.faq-open {
+  @apply border-brand-teal-dark shadow-lg;
+}
+
+.faq-button {
+  @apply w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none focus:ring-2 focus:ring-brand-teal-dark rounded-2xl;
+  transition: background-color 0.15s ease;
+}
+
+.faq-button:hover:not(.faq-button-open) {
+  @apply bg-brand-teal-light/5;
+}
+
+.faq-button-open {
+  @apply bg-brand-teal-light/10;
+}
+
+.faq-question {
+  @apply text-lg md:text-xl font-semibold text-gray-900;
+  transition: color 0.15s ease;
+}
+
+.faq-question-open {
+  @apply text-brand-teal-dark;
+}
+
+.faq-icon {
+  @apply ml-4 flex items-center justify-center;
+}
+
+.faq-icon-plus,
+.faq-icon-minus {
+  @apply w-6 h-6 text-brand-teal-dark;
+  transition: transform 0.2s ease;
+}
+
+.faq-content {
+  @apply overflow-hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-content-open {
+  /* Altura será definida dinamicamente via JavaScript */
+}
+
+.faq-answer {
+  @apply px-6 py-4 text-gray-700 text-base md:text-lg whitespace-pre-line;
+}
+
+/* Performance optimizations for FAQ animations */
+@media (prefers-reduced-motion: reduce) {
+  .faq-container,
+  .faq-button,
+  .faq-question,
+  .faq-icon-plus,
+  .faq-icon-minus,
+  .faq-content {
+    transition: none !important;
+  }
+}
+
+/* GPU acceleration for smoother animations */
+.faq-content {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Fingerprint Animation Z-Index Fix */
+.fingerprint-container {
+  position: relative;
+  z-index: 10;
+}
+
+.fingerprint-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Ensure proper stacking context for Hero elements */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 20;
+}
+
+.hero-fingerprint {
+  position: relative;
+  z-index: 10;
 } 
