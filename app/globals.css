@@ -269,60 +269,6 @@ html {
   }
 }
 
-/* Safari-specific fixes */
-@supports (-webkit-touch-callout: none) {
-  .hero-mobile-optimized {
-    /* Safari-specific adjustments */
-    min-height: -webkit-fill-available;
-    height: -webkit-fill-available;
-  }
-}
-
-/* Chrome/Android specific fixes */
-@supports not (-webkit-touch-callout: none) {
-  .hero-mobile-optimized {
-    /* Chrome/Android adjustments */
-    min-height: 100vh;
-    height: 100vh;
-  }
-}
-
-/* Fallback for older browsers */
-@supports not (height: 100dvh) {
-  .hero-mobile-optimized {
-    min-height: 100vh;
-    height: 100vh;
-  }
-}
-
-/* JavaScript-enhanced viewport height detection */
-.hero-mobile-optimized {
-  /* Base fallback */
-  min-height: 100vh;
-  height: 100vh;
-}
-
-/* Dynamic viewport height classes */
-.hero-mobile-optimized.dvh-supported {
-  min-height: 100dvh;
-  height: 100dvh;
-}
-
-.hero-mobile-optimized.safari-adjusted {
-  min-height: -webkit-fill-available;
-  height: -webkit-fill-available;
-}
-
-.hero-mobile-optimized.chrome-adjusted {
-  min-height: 100vh;
-  height: 100vh;
-}
-
-/* Smooth transitions for height changes */
-.hero-mobile-optimized {
-  transition: height 0.3s ease-out;
-}
-
 /* FAQ Component Optimizations */
 .faq-list {
   @apply space-y-4;
@@ -436,4 +382,14 @@ html {
 .hero-fingerprint {
   position: relative;
   z-index: 10;
-} 
+}
+
+/* Fallback for older browsers */
+@supports not (height: 100dvh) {
+  .hero-mobile-optimized {
+    min-height: 100vh;
+    height: 100vh;
+  }
+}
+
+/* FAQ Component Optimizations */ 
