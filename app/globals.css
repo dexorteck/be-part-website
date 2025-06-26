@@ -79,11 +79,14 @@ body {
     background: radial-gradient(circle, var(--tw-gradient-stops));
   }
 
-  /* Button with light sweep effect */
+  /* Button with light sweep effect - Otimizado para mobile */
   .btn-sweep {
     position: relative;
     background: linear-gradient(90deg, #5fdfc6, #02635a);
     overflow: hidden;
+    /* Otimizações de performance */
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .btn-sweep::before {
@@ -95,10 +98,163 @@ body {
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: left 0.6s ease;
+    /* Otimização para mobile */
+    will-change: left;
   }
 
   .btn-sweep:hover::before {
     left: 100%;
+  }
+
+  /* Otimizações específicas para mobile */
+  @media (max-width: 768px) {
+    .btn-sweep {
+      /* Remove efeitos pesados em mobile */
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .btn-sweep::before {
+      /* Remove sweep effect em mobile para melhor performance */
+      display: none;
+    }
+    
+    .btn-sweep:hover {
+      /* Efeito mais simples em mobile */
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  /* Otimizações para telas muito pequenas */
+  @media (max-width: 480px) {
+    .btn-sweep {
+      /* Transições ainda mais rápidas */
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    
+    .btn-sweep:hover {
+      /* Efeito mínimo em telas pequenas */
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  /* Otimizações gerais para botões em mobile */
+  @media (max-width: 768px) {
+    /* Botões com borda */
+    button[class*="border-"] {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    }
+    
+    button[class*="border-"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Ícones em botões */
+    .group:hover .group-hover\\:translate-x-1 {
+      transition: transform 0.2s ease;
+    }
+    
+    /* Elementos com scale */
+    .group-hover\\:scale-110 {
+      transition: transform 0.2s ease;
+    }
+    
+    /* Links com transições */
+    a[class*="transition-"] {
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+  }
+
+  /* Otimizações para telas muito pequenas */
+  @media (max-width: 480px) {
+    /* Botões com borda */
+    button[class*="border-"] {
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    
+    button[class*="border-"]:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Ícones em botões */
+    .group:hover .group-hover\\:translate-x-1 {
+      transition: transform 0.15s ease;
+    }
+    
+    /* Elementos com scale */
+    .group-hover\\:scale-110 {
+      transition: transform 0.15s ease;
+    }
+    
+    /* Links com transições */
+    a[class*="transition-"] {
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+  }
+
+  /* Classes específicas para CTA otimizadas */
+  .cta-secondary-btn {
+    will-change: transform, box-shadow, background-color, border-color;
+    transform: translateZ(0);
+  }
+
+  .contact-icon {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  .social-link {
+    will-change: color;
+  }
+
+  /* Otimizações mobile para CTA */
+  @media (max-width: 768px) {
+    .cta-secondary-btn {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    }
+    
+    .cta-secondary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .contact-icon {
+      transition: transform 0.2s ease;
+    }
+    
+    .contact-icon:hover {
+      transform: scale(1.05);
+    }
+    
+    .social-link {
+      transition: color 0.2s ease;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cta-secondary-btn {
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    
+    .cta-secondary-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.2);
+    }
+    
+    .contact-icon {
+      transition: transform 0.15s ease;
+    }
+    
+    .contact-icon:hover {
+      transform: scale(1.03);
+    }
+    
+    .social-link {
+      transition: color 0.15s ease;
+    }
   }
 }
 
@@ -229,15 +385,38 @@ html {
     line-height: 1.2;
   }
   
-  /* Hero section mobile optimizations - Solução robusta para Safari/Chrome */
+  /* Hero section mobile optimizations - Solução CSS pura otimizada */
   .hero-mobile-optimized {
-    min-height: 100vh; /* Fallback */
-    min-height: 100dvh; /* Dynamic viewport height - modern browsers */
-    height: 100vh; /* Fallback */
-    height: 100dvh; /* Dynamic viewport height - modern browsers */
+    min-height: 100vh;
+    height: 100vh;
     padding-bottom: 80px;
+    /* Previne mudanças durante scroll usando viewport units estáveis */
+    height: 100vh;
+    min-height: 100vh;
+    /* Otimização de performance */
+    will-change: auto;
+    contain: layout style;
   }
   
+  /* Safari-specific fixes - usa altura estável */
+  @supports (-webkit-touch-callout: none) {
+    .hero-mobile-optimized {
+      /* Safari - usa altura estável que não muda durante scroll */
+      height: 100vh;
+      min-height: 100vh;
+      /* Remove -webkit-fill-available que causa mudanças */
+    }
+  }
+
+  /* Chrome/Android specific fixes */
+  @supports not (-webkit-touch-callout: none) {
+    .hero-mobile-optimized {
+      /* Chrome/Android - altura estável */
+      height: 100vh;
+      min-height: 100vh;
+    }
+  }
+
   /* Ensure scroll indicator is always visible on mobile */
   .scroll-indicator-mobile {
     bottom: 20px !important;
@@ -343,6 +522,26 @@ html {
   .faq-content {
     transition: none !important;
   }
+  
+  /* Otimizações para botões com movimento reduzido */
+  .btn-sweep,
+  .btn-sweep::before,
+  .cta-secondary-btn,
+  .contact-icon,
+  .social-link,
+  button[class*="border-"],
+  .group-hover\\:translate-x-1,
+  .group-hover\\:scale-110,
+  a[class*="transition-"] {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .btn-sweep:hover,
+  .cta-secondary-btn:hover,
+  .contact-icon:hover {
+    transform: none !important;
+  }
 }
 
 /* GPU acceleration for smoother animations */
@@ -387,8 +586,8 @@ html {
 /* Fallback for older browsers */
 @supports not (height: 100dvh) {
   .hero-mobile-optimized {
-    min-height: 100vh;
     height: 100vh;
+    min-height: 100vh;
   }
 }
 

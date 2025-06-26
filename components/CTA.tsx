@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react'
+import { ArrowRight, Mail, MapPin } from 'lucide-react'
 
 export default function CTA() {
   return (
@@ -26,14 +26,9 @@ export default function CTA() {
               Pronto para criar experiências memoráveis? Vamos transformar as suas ideias em realidade.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex justify-center lg:justify-start">
               <button className="group btn-sweep inline-flex items-center px-8 py-4 text-lg font-medium text-black transition-all duration-300 shadow-elegant hover:shadow-2xl transform hover:-translate-y-1">
                 Entrar em contacto
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-              
-              <button className="group inline-flex items-center px-8 py-4 text-lg font-medium text-brand-teal-light border-2 border-brand-teal-light/30 rounded-full hover:border-brand-teal-light hover:bg-brand-teal-light/10 transition-all duration-300">
-                Ver portfólio
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
             </div>
@@ -49,7 +44,7 @@ export default function CTA() {
               
               <div className="space-y-6">
                 <div className="flex items-center space-x-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand-teal-dark to-brand-teal-light rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand-teal-dark to-brand-teal-light rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 contact-icon">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -59,17 +54,7 @@ export default function CTA() {
                 </div>
 
                 <div className="flex items-center space-x-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand-teal-dark to-brand-teal-light rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm mb-1">Telefone</p>
-                    <p className="text-white font-medium">+351 123 456 789</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand-teal-dark to-brand-teal-light rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand-teal-dark to-brand-teal-light rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 contact-icon">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -87,7 +72,7 @@ export default function CTA() {
                     href="https://www.linkedin.com/company/be-part-events-communication/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-brand-teal-light transition-colors duration-300 text-sm font-medium"
+                    className="text-gray-400 hover:text-brand-teal-light transition-colors duration-300 text-sm font-medium social-link"
                   >
                     LinkedIn
                   </a>
@@ -95,7 +80,7 @@ export default function CTA() {
                     href="https://www.instagram.com/bepart___?igsh=MXM1YTdtZWNxMno0eA%3D%3D&utm_source=qr"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-brand-teal-light transition-colors duration-300 text-sm font-medium"
+                    className="text-gray-400 hover:text-brand-teal-light transition-colors duration-300 text-sm font-medium social-link"
                   >
                     Instagram
                   </a>
@@ -103,7 +88,7 @@ export default function CTA() {
                     href="https://www.facebook.com/people/Be-Part-Every-Piece-Matters/61577650228547/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-brand-teal-light transition-colors duration-300 text-sm font-medium"
+                    className="text-gray-400 hover:text-brand-teal-light transition-colors duration-300 text-sm font-medium social-link"
                   >
                     Facebook
                   </a>
@@ -121,7 +106,7 @@ export default function CTA() {
               href="https://instagram.com/dexorteck" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-brand-teal-light hover:text-white font-medium transition-colors duration-300"
+              className="text-brand-teal-light hover:text-white font-medium transition-colors duration-300 social-link"
             >
               @dexorteck
             </a>
