@@ -3,10 +3,13 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
 import FingerprintAnimation from './FingerprintAnimation'
+import { useViewportHeight } from './useViewportHeight'
 
 export default function Hero() {
+  const viewportClass = useViewportHeight()
+
   return (
-    <section className="relative min-h-[90vh] h-[90vh] sm:min-h-screen sm:h-screen flex items-center justify-center bg-gray-900 overflow-hidden py-10 sm:py-16 hero-mobile-optimized">
+    <section className={`relative min-h-[100vh] min-h-[100dvh] h-[100vh] h-[100dvh] sm:min-h-screen sm:h-screen flex items-center justify-center bg-gray-900 overflow-hidden py-10 sm:py-16 hero-mobile-optimized ${viewportClass}`}>
       {/* Dark Background with Custom Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
       

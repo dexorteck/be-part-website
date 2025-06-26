@@ -229,11 +229,13 @@ html {
     line-height: 1.2;
   }
   
-  /* Hero section mobile optimizations */
+  /* Hero section mobile optimizations - Solução robusta para Safari/Chrome */
   .hero-mobile-optimized {
-    min-height: 90vh;
-    height: 90vh;
-    padding-bottom: 80px; /* Extra space for scroll indicator */
+    min-height: 100vh; /* Fallback */
+    min-height: 100dvh; /* Dynamic viewport height - modern browsers */
+    height: 100vh; /* Fallback */
+    height: 100dvh; /* Dynamic viewport height - modern browsers */
+    padding-bottom: 80px;
   }
   
   /* Ensure scroll indicator is always visible on mobile */
@@ -251,8 +253,10 @@ html {
 /* Additional mobile optimizations for very small screens */
 @media (max-width: 480px) {
   .hero-mobile-optimized {
-    min-height: 90vh;
-    height: 90vh;
+    min-height: 100vh; /* Fallback */
+    min-height: 100dvh; /* Dynamic viewport height */
+    height: 100vh; /* Fallback */
+    height: 100dvh; /* Dynamic viewport height */
     padding-bottom: 100px;
   }
   
@@ -263,6 +267,60 @@ html {
   .cta-button-mobile {
     margin-bottom: 80px;
   }
+}
+
+/* Safari-specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .hero-mobile-optimized {
+    /* Safari-specific adjustments */
+    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
+  }
+}
+
+/* Chrome/Android specific fixes */
+@supports not (-webkit-touch-callout: none) {
+  .hero-mobile-optimized {
+    /* Chrome/Android adjustments */
+    min-height: 100vh;
+    height: 100vh;
+  }
+}
+
+/* Fallback for older browsers */
+@supports not (height: 100dvh) {
+  .hero-mobile-optimized {
+    min-height: 100vh;
+    height: 100vh;
+  }
+}
+
+/* JavaScript-enhanced viewport height detection */
+.hero-mobile-optimized {
+  /* Base fallback */
+  min-height: 100vh;
+  height: 100vh;
+}
+
+/* Dynamic viewport height classes */
+.hero-mobile-optimized.dvh-supported {
+  min-height: 100dvh;
+  height: 100dvh;
+}
+
+.hero-mobile-optimized.safari-adjusted {
+  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.hero-mobile-optimized.chrome-adjusted {
+  min-height: 100vh;
+  height: 100vh;
+}
+
+/* Smooth transitions for height changes */
+.hero-mobile-optimized {
+  transition: height 0.3s ease-out;
 }
 
 /* FAQ Component Optimizations */
