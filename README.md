@@ -135,4 +135,7 @@ The landing page is fully responsive with breakpoints:
 - Responsive images
 
 Be Part – Events & Communication  
-Connecting people, ideas, and experiences. Every piece matters. 
+Connecting people, ideas, and experiences. Every piece matters.
+
+---
+*Teste de configuração Git - DexorTeck* 
