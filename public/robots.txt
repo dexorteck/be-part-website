@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bepartmatters.com/sitemap.xml 
+Sitemap: https://www.bepartmatters.com/sitemap.xml 

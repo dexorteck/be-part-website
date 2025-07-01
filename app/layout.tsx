@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://bepartmatters.com'),
+  metadataBase: new URL('https://www.bepartmatters.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Be Part – Events & Communication',
     description: 'Conectamos pessoas, ideias e experiências. Promovemos inclusão e impacto positivo. Cada peça conta.',
-    url: 'https://bepartmatters.com',
+    url: 'https://www.bepartmatters.com',
     siteName: 'Be Part',
     locale: 'pt_PT',
     type: 'website',
