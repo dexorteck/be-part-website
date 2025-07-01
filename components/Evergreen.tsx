@@ -22,9 +22,9 @@ export default function Evergreen() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 macbook-small:gap-10 macbook:gap-12 mb-16 sm:mb-18 macbook-small:mb-20 macbook:mb-24">
           <div className="group text-center">
             <div className="inline-flex items-center justify-center w-16 sm:w-18 macbook-small:w-20 macbook:w-22 h-16 sm:h-18 macbook-small:h-20 macbook:h-22 bg-gradient-to-br from-brand-teal-dark/30 to-brand-teal-light/20 rounded-full mb-4 sm:mb-6 transition-all duration-300 border border-brand-teal-light/30">
-              <Leaf className="w-8 sm:w-9 macbook-small:w-10 macbook:w-11 h-8 sm:h-9 macbook-small:h-10 macbook:h-11 text-brand-teal-light" />
+              <Leaf className="w-8 sm:w-9 macbook-small:w-10 macbook:w-11 h-8 sm:h-9 macbook-small:h-10 macbook:h-11 text-brand-teal-light group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-lg sm:text-xl macbook-small:text-2xl macbook:text-3xl font-brand font-semibold text-white mb-2 sm:mb-3">
+            <h3 className="text-lg sm:text-xl macbook-small:text-2xl macbook:text-3xl font-brand font-semibold text-white mb-2 sm:mb-3 group-hover:text-brand-teal-light transition-colors duration-300">
               Catering Sustentável
             </h3>
             <p className="text-sm sm:text-base macbook-small:text-lg text-gray-400">
@@ -33,9 +33,9 @@ export default function Evergreen() {
           </div>
           <div className="group text-center">
             <div className="inline-flex items-center justify-center w-16 sm:w-18 macbook-small:w-20 macbook:w-22 h-16 sm:h-18 macbook-small:h-20 macbook:h-22 bg-gradient-to-br from-brand-teal-dark/30 to-brand-teal-light/20 rounded-full mb-4 sm:mb-6 transition-all duration-300 border border-brand-teal-light/30">
-              <Recycle className="w-8 sm:w-9 macbook-small:w-10 macbook:w-11 h-8 sm:h-9 macbook-small:h-10 macbook:h-11 text-brand-teal-light" />
+              <Recycle className="w-8 sm:w-9 macbook-small:w-10 macbook:w-11 h-8 sm:h-9 macbook-small:h-10 macbook:h-11 text-brand-teal-light group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-lg sm:text-xl macbook-small:text-2xl macbook:text-3xl font-brand font-semibold text-white mb-2 sm:mb-3">
+            <h3 className="text-lg sm:text-xl macbook-small:text-2xl macbook:text-3xl font-brand font-semibold text-white mb-2 sm:mb-3 group-hover:text-brand-teal-light transition-colors duration-300">
               Gestão eficiente de resíduos
             </h3>
             <p className="text-sm sm:text-base macbook-small:text-lg text-gray-400">
@@ -44,9 +44,9 @@ export default function Evergreen() {
           </div>
           <div className="group text-center">
             <div className="inline-flex items-center justify-center w-16 sm:w-18 macbook-small:w-20 macbook:w-22 h-16 sm:h-18 macbook-small:h-20 macbook:h-22 bg-gradient-to-br from-brand-teal-dark/30 to-brand-teal-light/20 rounded-full mb-4 sm:mb-6 transition-all duration-300 border border-brand-teal-light/30">
-              <Smartphone className="w-8 sm:w-9 macbook-small:w-10 macbook:w-11 h-8 sm:h-9 macbook-small:h-10 macbook:h-11 text-brand-teal-light" />
+              <Smartphone className="w-8 sm:w-9 macbook-small:w-10 macbook:w-11 h-8 sm:h-9 macbook-small:h-10 macbook:h-11 text-brand-teal-light group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-lg sm:text-xl macbook-small:text-2xl macbook:text-3xl font-brand font-semibold text-white mb-2 sm:mb-3">
+            <h3 className="text-lg sm:text-xl macbook-small:text-2xl macbook:text-3xl font-brand font-semibold text-white mb-2 sm:mb-3 group-hover:text-brand-teal-light transition-colors duration-300">
               Credenciação eletrónica
             </h3>
             <p className="text-sm sm:text-base macbook-small:text-lg text-gray-400">
@@ -55,9 +55,9 @@ export default function Evergreen() {
           </div>
           <div className="group text-center">
             <div className="inline-flex items-center justify-center w-16 sm:w-18 macbook-small:w-20 macbook:w-22 h-16 sm:h-18 macbook-small:h-20 macbook:h-22 bg-gradient-to-br from-brand-teal-dark/30 to-brand-teal-light/20 rounded-full mb-4 sm:mb-6 transition-all duration-300 border border-brand-teal-light/30">
-              <Heart className="w-8 sm:w-9 macbook-small:w-10 macbook:w-11 h-8 sm:h-9 macbook-small:h-10 macbook:h-11 text-brand-teal-light" />
+              <Heart className="w-8 sm:w-9 macbook-small:w-10 macbook:w-11 h-8 sm:h-9 macbook-small:h-10 macbook:h-11 text-brand-teal-light group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-lg sm:text-xl macbook-small:text-2xl macbook:text-3xl font-brand font-semibold text-white mb-2 sm:mb-3">
+            <h3 className="text-lg sm:text-xl macbook-small:text-2xl macbook:text-3xl font-brand font-semibold text-white mb-2 sm:mb-3 group-hover:text-brand-teal-light transition-colors duration-300">
               Outras soluções
             </h3>
             <p className="text-sm sm:text-base macbook-small:text-lg text-gray-400">
@@ -82,7 +82,7 @@ export default function Evergreen() {
               <img 
                 src="/assets/icons/cartões de visita Be Part-2.png" 
                 alt="Logo Evergreen by Be Part"
-                className="mx-auto w-56 sm:w-72 macbook-small:w-96 macbook:w-[32rem] h-auto object-contain"
+                className="mx-auto w-80 sm:w-96 macbook-small:w-[28rem] macbook:w-[36rem] h-auto object-contain"
               />
             </div>
           </div>

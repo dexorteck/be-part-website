@@ -20,16 +20,8 @@ const faqs = [
     answer: 'Com ambos! Adaptamo-nos a cada desafio, seja para empresas, marcas, instituições ou projetos pessoais.'
   },
   {
-    question: 'Atuam em todo o país?',
-    answer: 'Sim. A Be Part desenvolve projetos e organiza eventos em qualquer ponto do território nacional.'
-  },
-  {
     question: 'Fazem orçamentos personalizados?',
     answer: 'Sim. Cada projeto é único. Entra em contacto connosco para receber uma proposta ajustada aos teus objetivos.'
-  },
-  {
-    question: 'Como posso pedir um orçamento ou entrar em contacto?',
-    answer: 'Podes preencher o formulário no site, enviar-nos um e-mail ou contactar-nos pelas redes sociais.'
   },
 ]
 

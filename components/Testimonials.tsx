@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { Mail, Linkedin } from 'lucide-react'
 
 export default function Testimonials() {
   return (
@@ -16,24 +17,6 @@ export default function Testimonials() {
 
         {/* Founders Photos Grid */}
         <div className="grid lg:grid-cols-2 gap-12 max-w-4xl mx-auto mb-16">
-          {/* Vítor Macias */}
-          <div className="text-center">
-            <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-elegant">
-              <img 
-                src="/assets/images/vitor.jpeg" 
-                alt="Vítor Macias" 
-                className="w-full h-full object-cover"
-                style={{ objectPosition: '50% 20%' }}
-              />
-            </div>
-            <h3 className="text-2xl font-brand font-bold mb-2">
-              VITOR MACIAS
-            </h3>
-            <p className="text-lg font-medium text-brand-teal-dark uppercase tracking-wide">
-              CO - FOUNDER AND EVENTS DIRECTOR
-            </p>
-          </div>
-
           {/* Duarte Mairos */}
           <div className="text-center">
             <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-elegant">
@@ -47,9 +30,67 @@ export default function Testimonials() {
             <h3 className="text-2xl font-brand font-bold mb-2">
               DUARTE MAIROS
             </h3>
-            <p className="text-lg font-medium text-brand-teal-dark uppercase tracking-wide">
+            <p className="text-lg font-medium text-brand-teal-dark uppercase tracking-wide mb-4">
               CO - FOUNDER AND COMMUNICATION DIRECTOR
             </p>
+            
+            {/* Contact Links */}
+            <div className="flex justify-center space-x-4">
+              <a 
+                href="mailto:duarte@bepartmatters.com"
+                className="flex items-center space-x-2 text-gray-600 hover:text-brand-teal-dark transition-colors duration-300 group"
+              >
+                <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium">Email</span>
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/duarte-mairos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-gray-600 hover:text-brand-teal-dark transition-colors duration-300 group"
+              >
+                <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium">LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Vítor Macias */}
+          <div className="text-center">
+            <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-elegant">
+              <img 
+                src="/assets/images/vitor.jpeg" 
+                alt="Vítor Macias" 
+                className="w-full h-full object-cover"
+                style={{ objectPosition: '50% 20%' }}
+              />
+            </div>
+            <h3 className="text-2xl font-brand font-bold mb-2">
+              VITOR MACIAS
+            </h3>
+            <p className="text-lg font-medium text-brand-teal-dark uppercase tracking-wide mb-4">
+              CO - FOUNDER AND EVENTS DIRECTOR
+            </p>
+            
+            {/* Contact Links */}
+            <div className="flex justify-center space-x-4">
+              <a 
+                href="mailto:vitor@bepartmatters.com"
+                className="flex items-center space-x-2 text-gray-600 hover:text-brand-teal-dark transition-colors duration-300 group"
+              >
+                <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium">Email</span>
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/vitor-macias/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-gray-600 hover:text-brand-teal-dark transition-colors duration-300 group"
+              >
+                <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium">LinkedIn</span>
+              </a>
+            </div>
           </div>
         </div>
 
