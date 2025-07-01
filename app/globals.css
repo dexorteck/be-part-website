@@ -297,6 +297,8 @@ body {
     background-color: var(--brand-teal-medium);
   }
 
+
+
   /* Custom gradient colors */
   .from-brand-teal-light {
     --tw-gradient-from: var(--brand-teal-light);
