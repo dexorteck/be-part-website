@@ -28,9 +28,12 @@ export default function Services() {
                 <Lightbulb className="w-8 h-8 text-gray-925" />
               </div>
               
-              <h3 className="text-2xl md:text-3xl font-brand font-bold mb-4">
+              <h3 className="text-2xl md:text-3xl font-brand font-bold mb-1">
                 CONSULTORIA
               </h3>
+              <p className="text-xs text-gray-400 italic mb-3" style={{ fontFamily: 'cursive' }}>
+                crafted by
+              </p>
               <p className="text-lg font-medium text-gray-300 mb-6">
                 Soluções alinhadas com objetivos claros e comunicação eficaz.
               </p>
@@ -64,9 +67,12 @@ export default function Services() {
                 <Calendar className="w-8 h-8 text-brand-teal-light" />
               </div>
               
-              <h3 className="text-2xl md:text-3xl font-brand font-bold mb-4">
+              <h3 className="text-2xl md:text-3xl font-brand font-bold mb-1">
                 EVENTOS
               </h3>
+              <p className="text-xs text-gray-400 italic mb-3" style={{ fontFamily: 'cursive' }}>
+                crafted by
+              </p>
               <p className="text-lg font-medium text-gray-925 mb-6">
                 Planeamento, produção e logística de experiências memoráveis.
               </p>
@@ -96,9 +102,12 @@ export default function Services() {
                 <MessageCircle className="w-8 h-8 text-brand-teal-dark" />
               </div>
               
-              <h3 className="text-2xl md:text-3xl font-brand font-bold mb-4">
+              <h3 className="text-2xl md:text-3xl font-brand font-bold mb-1">
                 COMUNICAÇÃO
               </h3>
+              <p className="text-xs text-gray-400 italic mb-3" style={{ fontFamily: 'cursive' }}>
+                crafted by
+              </p>
               <p className="text-lg font-medium text-brand-teal-light mb-6">
                 Identidade visual, redes sociais, conteúdo, media training e mais.
               </p>
