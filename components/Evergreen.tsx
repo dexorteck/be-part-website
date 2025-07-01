@@ -74,7 +74,10 @@ export default function Evergreen() {
                 COMPROMISSO com o futuro
               </h3>
               <p className="text-base sm:text-lg macbook-small:text-xl text-gray-300 leading-relaxed mb-4 sm:mb-6">
-                O nosso selo de garantia reflete o compromisso da Be Part, dos nossos parceiros e fornecedores. Garantimos que todos os serviços que tiverem este selo seguem práticas ecológicas e responsáveis, respeitando o planeta e as comunidades locais.
+                O nosso selo de garantia reflete o compromisso da Be Part, dos nossos parceiros e fornecedores.
+              </p>
+              <p className="text-base sm:text-lg macbook-small:text-xl text-gray-300 leading-relaxed">
+                Garantimos que todos os serviços que tiverem este selo seguem práticas ecológicas e responsáveis, respeitando o planeta e as comunidades locais.
               </p>
             </div>
             
