@@ -37,7 +37,7 @@ export default function Testimonials() {
             {/* Contact Links */}
             <div className="flex justify-center space-x-4">
               <a 
-                href="mailto:duarte@bepartmatters.com"
+                href="mailto:duartemairos@bepartmatters.com"
                 className="flex items-center space-x-2 text-gray-600 hover:text-brand-teal-dark transition-colors duration-300 group"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
@@ -75,14 +75,14 @@ export default function Testimonials() {
             {/* Contact Links */}
             <div className="flex justify-center space-x-4">
               <a 
-                href="mailto:vitor@bepartmatters.com"
+                href="mailto:vitormacias@bepartmatters.com"
                 className="flex items-center space-x-2 text-gray-600 hover:text-brand-teal-dark transition-colors duration-300 group"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                 <span className="text-sm font-medium">Email</span>
               </a>
               <a 
-                href="https://www.linkedin.com/in/vitor-macias/"
+                href="https://www.linkedin.com/in/vitor-hugo-ferreira-macias/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-gray-600 hover:text-brand-teal-dark transition-colors duration-300 group"
