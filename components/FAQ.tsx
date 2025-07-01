@@ -8,10 +8,6 @@ const faqs = [
     answer: 'A Be Part é uma empresa que atua nas áreas de eventos, comunicação e consultoria estratégica. Criamos experiências, campanhas e soluções pensadas à medida de cada cliente.'
   },
   {
-    question: 'Quais os serviços que oferecem?',
-    answer: 'Dividimos a nossa atividade em três grandes áreas:\n• Eventos – Organização, produção e gestão de eventos corporativos, culturais e institucionais (Powered by Be Part);\n• Comunicação – Estratégia de marca, gestão de redes sociais, marketing digital e design (Crafted by Be Part);\n• Consultoria Estratégica – Inovação, sustentabilidade e posicionamento de marca (Taylored by Be Part).'
-  },
-  {
     question: 'O que são as Evergreen Solutions?',
     answer: 'O Evergreen Solutions é o nosso selo de sustentabilidade. Sempre que possível, apresentamos alternativas mais sustentáveis nas diferentes fases do projeto — seja em eventos, comunicação ou consultoria. A escolha final cabe sempre ao cliente.'
   },
@@ -38,10 +34,6 @@ const faqs = [
   {
     question: 'Podem tornar o meu evento mais sustentável?',
     answer: 'Sim. Através do selo Evergreen Solutions, propomos práticas e soluções mais responsáveis em áreas como catering, credenciação, transporte, materiais e gestão de resíduos. O cliente decide se as integra ou não.'
-  },
-  {
-    question: 'O que significa "Be Part"?',
-    answer: '"Be Part" é mais do que um nome – é uma forma de estar. Significa criar em conjunto, envolver e deixar marca. Acreditamos que fazer parte é construir algo com impacto real e duradouro.'
   },
 ]
 

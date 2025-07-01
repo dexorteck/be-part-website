@@ -5,20 +5,20 @@ import { Lightbulb, Calendar, MessageCircle } from 'lucide-react'
 
 export default function Services() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-16 sm:py-20 macbook-small:py-24 macbook:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-brand font-bold text-gray-900 mb-6">
+        <div className="text-center mb-16 sm:mb-18 macbook-small:mb-20 macbook:mb-24">
+          <h2 className="text-3xl sm:text-4xl macbook-small:text-5xl macbook:text-6xl macbook-large:text-7xl font-brand font-bold text-gray-900 mb-4 sm:mb-6">
             SERVIÇOS
           </h2>
-          <div className="mx-auto mt-6 mb-10 w-20 h-1 bg-gradient-to-r from-brand-teal-dark to-brand-teal-light"></div>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <div className="mx-auto mt-4 sm:mt-6 mb-8 sm:mb-10 w-16 sm:w-20 h-1 bg-gradient-to-r from-brand-teal-dark to-brand-teal-light"></div>
+          <p className="text-lg sm:text-xl macbook-small:text-2xl macbook:text-3xl text-gray-600 max-w-3xl sm:max-w-4xl macbook:max-w-5xl mx-auto leading-relaxed">
             Oferecemos soluções integradas para elevar a sua marca e criar experiências que fazem a diferença.
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid - Layout original restaurado */}
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Consultoria Estratégica */}
           <div className="group bg-gray-925 text-white p-12 rounded-2xl shadow-elegant hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
