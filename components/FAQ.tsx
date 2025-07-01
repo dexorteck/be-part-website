@@ -12,6 +12,10 @@ const faqs = [
     answer: 'O Evergreen Solutions é o nosso selo de sustentabilidade. Sempre que possível, apresentamos alternativas mais sustentáveis nas diferentes fases do projeto — seja em eventos, comunicação ou consultoria. A escolha final cabe sempre ao cliente.'
   },
   {
+    question: 'Podem tornar o meu evento mais sustentável?',
+    answer: 'Sim. Através do selo Evergreen Solutions, propomos práticas e soluções mais responsáveis em áreas como catering, credenciação, transporte, materiais e gestão de resíduos. O cliente decide se as integra ou não.'
+  },
+  {
     question: 'Trabalham com empresas ou com particulares?',
     answer: 'Com ambos! Adaptamo-nos a cada desafio, seja para empresas, marcas, instituições ou projetos pessoais.'
   },
@@ -26,14 +30,6 @@ const faqs = [
   {
     question: 'Como posso pedir um orçamento ou entrar em contacto?',
     answer: 'Podes preencher o formulário no site, enviar-nos um e-mail ou contactar-nos pelas redes sociais.'
-  },
-  {
-    question: 'A Be Part faz branding e criação de logótipos?',
-    answer: 'Sim. O serviço Crafted by Be Part inclui naming, identidade visual, branding, rebranding, packaging e mais.'
-  },
-  {
-    question: 'Podem tornar o meu evento mais sustentável?',
-    answer: 'Sim. Através do selo Evergreen Solutions, propomos práticas e soluções mais responsáveis em áreas como catering, credenciação, transporte, materiais e gestão de resíduos. O cliente decide se as integra ou não.'
   },
 ]
 

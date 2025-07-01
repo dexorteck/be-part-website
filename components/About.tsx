@@ -17,8 +17,7 @@ export default function About() {
             </div>
             
             <p className="text-lg sm:text-xl macbook-small:text-2xl macbook:text-3xl text-gray-700 leading-relaxed font-light">
-              Conectamos pessoas, ideias e experiências. Promovemos inclusão e impacto positivo. 
-              <span className="gradient-text font-medium"> Cada peça conta.</span>
+              Assente no princípio de que cada peça é essencial. Este conceito reforça a importância de cada um de nós e de cada contributo.
             </p>
 
             <div className="pt-6 macbook-small:pt-8 macbook:pt-10">
@@ -27,9 +26,9 @@ export default function About() {
                   <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="w-2 h-2 bg-brand-teal-dark rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
                     <div>
-                      <h3 className="text-base sm:text-lg macbook-small:text-xl font-semibold text-gray-900 mb-2">Nossa Missão</h3>
+                      <h3 className="text-base sm:text-lg macbook-small:text-xl font-semibold text-gray-900 mb-2">Missão</h3>
                       <p className="text-sm sm:text-base macbook-small:text-lg text-gray-600 leading-relaxed">
-                        Transformar ideias em experiências memoráveis que conectam pessoas e geram impacto positivo na sociedade.
+                        A Be Part conecta marcas, pessoas e ideias com soluções criativas  em eventos, comunicação e consultoria, transformando cada projeto!
                       </p>
                     </div>
                   </div>
@@ -37,9 +36,9 @@ export default function About() {
                   <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="w-2 h-2 bg-brand-teal-dark rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
                     <div>
-                      <h3 className="text-base sm:text-lg macbook-small:text-xl font-semibold text-gray-900 mb-2">Nossa Visão</h3>
+                      <h3 className="text-base sm:text-lg macbook-small:text-xl font-semibold text-gray-900 mb-2">Visão</h3>
                       <p className="text-sm sm:text-base macbook-small:text-lg text-gray-600 leading-relaxed">
-                        Ser reconhecida como referência em eventos, comunicação e consultoria estratégica em Portugal.
+                        Ser a empresa de referência em eventos, comunicação e consultoria, reconhecida pela criatividade e inovação!
                       </p>
                     </div>
                   </div>

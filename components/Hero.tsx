@@ -38,7 +38,7 @@ export default function Hero() {
 
             {/* Main Headline - "BE PART" em texto grande, colado ao logo */}
             <div className="relative z-20 -mt-8 sm:-mt-12 md:-mt-16 macbook-small:-mt-20 macbook:-mt-24">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl macbook-small:text-[10rem] macbook:text-[12rem] font-brand font-bold leading-none">
+              <h1 className="text-7xl sm:text-8xl md:text-9xl macbook-small:text-[10rem] macbook:text-[12rem] font-brand font-bold leading-none">
                 <span className="block text-white">BE PART</span>
               </h1>
               {/* "EVERY PIECE MATTERS" colado ao BE PART, maior */}
@@ -59,10 +59,10 @@ export default function Hero() {
           <div className="pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12 macbook-small:pt-14 macbook:pt-16 pb-2 sm:pb-4 md:pb-6 lg:pb-8 macbook-small:pb-10 macbook:pb-12 relative z-20">
             <button 
               onClick={scrollToCTA}
-              className="group btn-sweep inline-flex items-center px-4 sm:px-6 md:px-8 macbook-small:px-10 macbook:px-12 py-2 sm:py-3 md:py-4 macbook-small:py-5 macbook:py-6 text-sm sm:text-base md:text-lg macbook-small:text-xl macbook:text-2xl font-medium text-black transition-all duration-300 shadow-elegant hover:shadow-2xl transform hover:-translate-y-1"
+              className="group btn-sweep inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-black transition-all duration-300 shadow-elegant hover:shadow-2xl transform hover:-translate-y-1"
             >
               Vamos conversar
-              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 macbook-small:h-6 macbook:h-7 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
         </div>
