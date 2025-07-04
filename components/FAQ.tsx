@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useCallback, memo, useRef, useLayoutEffect } from 'react'
+import React, { useState, useCallback, memo } from 'react'
 
 const faqs = [
   {
@@ -25,7 +25,7 @@ const faqs = [
   },
 ]
 
-// Componente otimizado para cada item FAQ com animações suaves
+// Componente otimizado para iOS - sem cálculos de altura dinâmica
 const FAQItem = memo(({ 
   faq, 
   index, 
@@ -37,20 +37,9 @@ const FAQItem = memo(({
   isOpen: boolean; 
   onToggle: (index: number) => void; 
 }) => {
-  const contentRef = useRef<HTMLDivElement>(null)
-  const [contentHeight, setContentHeight] = useState(0)
-
   const handleClick = useCallback(() => {
     onToggle(index)
   }, [index, onToggle])
-
-  // Calcular altura do conteúdo uma vez
-  useLayoutEffect(() => {
-    if (contentRef.current) {
-      const height = contentRef.current.scrollHeight
-      setContentHeight(height)
-    }
-  }, [faq.answer])
 
   return (
     <li className="faq-item">
@@ -81,12 +70,8 @@ const FAQItem = memo(({
           role="region"
           aria-labelledby={`faq-header-${index}`}
           className={`faq-content ${isOpen ? 'faq-content-open' : ''}`}
-          style={{
-            maxHeight: isOpen ? `${contentHeight}px` : '0px',
-            opacity: isOpen ? 1 : 0
-          }}
         >
-          <div ref={contentRef} className="faq-answer">
+          <div className="faq-answer">
             {faq.answer}
           </div>
         </div>

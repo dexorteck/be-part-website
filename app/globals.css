@@ -391,18 +391,19 @@ html {
   }
 }
 
-/* FAQ Component Optimizations */
+/* FAQ Component Optimizations - Otimizado para iOS */
 .faq-list {
   @apply space-y-4;
 }
 
 .faq-item {
-  @apply will-change-transform;
+  /* Removido will-change para melhor performance no iOS */
 }
 
 .faq-container {
   @apply rounded-2xl border border-gray-200 shadow-md bg-white;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  /* Transições mais rápidas para iOS */
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .faq-container.faq-open {
@@ -411,7 +412,8 @@ html {
 
 .faq-button {
   @apply w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none focus:ring-2 focus:ring-brand-teal-dark rounded-2xl;
-  transition: background-color 0.15s ease;
+  /* Transição mais rápida para iOS */
+  transition: background-color 0.1s ease;
 }
 
 .faq-button:hover:not(.faq-button-open) {
@@ -424,7 +426,8 @@ html {
 
 .faq-question {
   @apply text-lg md:text-xl font-semibold text-gray-900;
-  transition: color 0.15s ease;
+  /* Transição mais rápida para iOS */
+  transition: color 0.1s ease;
 }
 
 .faq-question-open {
@@ -438,21 +441,52 @@ html {
 .faq-icon-plus,
 .faq-icon-minus {
   @apply w-6 h-6 text-brand-teal-dark;
-  transition: transform 0.2s ease;
+  /* Transição mais rápida para iOS */
+  transition: transform 0.15s ease;
 }
 
+/* Animação simplificada para iOS - sem max-height dinâmico */
 .faq-content {
   @apply overflow-hidden;
-  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 0;
+  opacity: 0;
+  /* Transições mais rápidas e simples para iOS */
+  transition: max-height 0.2s ease, opacity 0.2s ease;
 }
 
-.faq-content-open {
-  /* Altura será definida dinamicamente via JavaScript */
+.faq-content.faq-content-open {
+  max-height: 500px; /* Altura fixa suficiente */
+  opacity: 1;
 }
 
 .faq-answer {
   @apply px-6 py-4 text-gray-700 text-base md:text-lg whitespace-pre-line;
+}
+
+/* Otimizações específicas para iOS/Safari */
+@supports (-webkit-touch-callout: none) {
+  .faq-content {
+    /* Usar transform em vez de max-height no iOS para melhor performance */
+    transform: scaleY(0);
+    transform-origin: top;
+    max-height: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .faq-content.faq-content-open {
+    transform: scaleY(1);
+    max-height: none;
+    opacity: 1;
+  }
+  
+  /* Reduzir ainda mais as transições no iOS */
+  .faq-container,
+  .faq-button,
+  .faq-question,
+  .faq-icon-plus,
+  .faq-icon-minus {
+    transition-duration: 0.1s !important;
+  }
 }
 
 /* Performance optimizations for FAQ animations */
@@ -487,10 +521,9 @@ html {
   }
 }
 
-/* GPU acceleration for smoother animations */
+/* Remover GPU acceleration que pode causar problemas no iOS */
 .faq-content {
-  transform: translateZ(0);
-  backface-visibility: hidden;
+  /* Removido transform: translateZ(0) e backface-visibility para melhor performance no iOS */
 }
 
 /* Otimizações específicas para MacBooks */
