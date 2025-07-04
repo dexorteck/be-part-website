@@ -3,9 +3,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Be Part – Events & Communication',
-  description: 'Conectamos pessoas, ideias e experiências. Promovemos inclusão e impacto positivo. Cada peça conta.',
-  keywords: 'eventos, comunicação, consultoria, sustentabilidade, Portugal, Be Part',
+  title: 'Be Part – Every Piece Matters',
+  description: 'Assente no princípio de que cada peça é essencial. Conectamos marcas, pessoas e ideias com soluções criativas em eventos, comunicação e consultoria. Promovemos inclusão, criatividade e impacto positivo. Cada peça conta. bepartmatters. Website desenvolvido por dexorteck.',
+  keywords: 'eventos, comunicação, consultoria, sustentabilidade, Portugal, Be Part, bepartmatters, dexorteck',
   authors: [{ name: 'Be Part' }],
   creator: 'Be Part',
   publisher: 'Be Part',
