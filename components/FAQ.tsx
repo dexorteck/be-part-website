@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useCallback, memo } from 'react'
+import React, { useState, useCallback, memo, useEffect } from 'react'
 
 const faqs = [
   {
@@ -25,7 +25,14 @@ const faqs = [
   },
 ]
 
-// Componente otimizado para iOS - sem cálculos de altura dinâmica
+// Detectar iOS
+const isIOS = () => {
+  if (typeof window === 'undefined') return false
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+}
+
+// Componente otimizado para iOS - solução híbrida
 const FAQItem = memo(({ 
   faq, 
   index, 
@@ -37,6 +44,12 @@ const FAQItem = memo(({
   isOpen: boolean; 
   onToggle: (index: number) => void; 
 }) => {
+  const [isIOSDevice, setIsIOSDevice] = useState(false)
+
+  useEffect(() => {
+    setIsIOSDevice(isIOS())
+  }, [])
+
   const handleClick = useCallback(() => {
     onToggle(index)
   }, [index, onToggle])
@@ -69,7 +82,7 @@ const FAQItem = memo(({
           id={`faq-panel-${index}`}
           role="region"
           aria-labelledby={`faq-header-${index}`}
-          className={`faq-content ${isOpen ? 'faq-content-open' : ''}`}
+          className={`faq-content ${isOpen ? 'faq-content-open' : ''} ${isIOSDevice ? 'faq-ios' : ''}`}
         >
           <div className="faq-answer">
             {faq.answer}

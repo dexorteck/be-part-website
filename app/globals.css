@@ -391,7 +391,7 @@ html {
   }
 }
 
-/* FAQ Component Optimizations - Otimizado para iOS */
+/* FAQ Component Optimizations - Solução híbrida para iOS */
 .faq-list {
   @apply space-y-4;
 }
@@ -445,7 +445,7 @@ html {
   transition: transform 0.15s ease;
 }
 
-/* Animação suave com max-height otimizada */
+/* SOLUÇÃO HÍBRIDA: Animação normal para desktop/Android */
 .faq-content {
   @apply overflow-hidden;
   max-height: 0;
@@ -459,29 +459,21 @@ html {
   opacity: 1;
 }
 
-.faq-answer {
-  @apply px-6 py-4 text-gray-700 text-base md:text-lg whitespace-pre-line;
+/* SOLUÇÃO ESPECÍFICA PARA iOS: Display block/none com fade */
+.faq-content.faq-ios {
+  max-height: none !important;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
 }
 
-/* Otimizações específicas para iOS/Safari */
-@supports (-webkit-touch-callout: none) {
-  .faq-content {
-    /* No iOS, usar uma transição ligeiramente mais rápida mas ainda suave */
-    transition: max-height 0.2s ease-out, opacity 0.15s ease-out;
-  }
-  
-  .faq-content.faq-content-open {
-    max-height: 250px; /* Ligeiramente menor no iOS */
-  }
-  
-  /* Reduzir transições de outros elementos no iOS */
-  .faq-container,
-  .faq-button,
-  .faq-question,
-  .faq-icon-plus,
-  .faq-icon-minus {
-    transition-duration: 0.1s !important;
-  }
+.faq-content.faq-ios.faq-content-open {
+  display: block;
+  opacity: 1;
+}
+
+.faq-answer {
+  @apply px-6 py-4 text-gray-700 text-base md:text-lg whitespace-pre-line;
 }
 
 /* Performance optimizations for FAQ animations */
