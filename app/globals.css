@@ -459,7 +459,7 @@ html {
   opacity: 1;
 }
 
-/* SOLUÇÃO ESPECÍFICA PARA iOS: Display block/none com fade */
+/* SOLUÇÃO ESPECÍFICA PARA iOS/Safari: Display block/none com fade */
 .faq-content.faq-ios {
   max-height: none !important;
   display: none;

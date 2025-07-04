@@ -25,11 +25,17 @@ const faqs = [
   },
 ]
 
-// Detectar iOS
-const isIOS = () => {
+// Detectar iOS e Safari (que têm problemas similares)
+const isSafariOrIOS = () => {
   if (typeof window === 'undefined') return false
-  return /iPad|iPhone|iPod/.test(navigator.userAgent) || 
-         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+  
+  const userAgent = navigator.userAgent
+  const isIOS = /iPad|iPhone|iPod/.test(userAgent) || 
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+  
+  const isSafari = /Safari/.test(userAgent) && !/Chrome/.test(userAgent)
+  
+  return isIOS || isSafari
 }
 
 // Componente otimizado para iOS - solução híbrida
@@ -47,7 +53,7 @@ const FAQItem = memo(({
   const [isIOSDevice, setIsIOSDevice] = useState(false)
 
   useEffect(() => {
-    setIsIOSDevice(isIOS())
+    setIsIOSDevice(isSafariOrIOS())
   }, [])
 
   const handleClick = useCallback(() => {
